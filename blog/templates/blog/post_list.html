@@ -1,22 +1,11 @@
-<html>
-	<head>
-		<title>AllenKim's blog</title>
-	</head>
-	<body>
-		<div>
-			<h1><a href="">Allen Kim's Blog </a></h1>
-		</div>
-		
-		<div>
-			<p>published: 16.07.2017, 09:29</p>
-			<h2><a href="">My first post</a></h2>
-			<p>alea iacta est</p>
-		</div>
-		
-		<div>
-			<p>published: 16.07.2017, 09:31</p>
-			<h2><a href="">My second post</a></h2>
-			<p>Veni, vidi, vici!</p>
-		</div>
-	</body>
-</html>
+<div>
+    <h1><a href="/">Allen Kim Blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
