@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 	'polls',	# added by AllenPython
 	'books',	# added by AllenPython
+	'blog',		# added by AllenPython
 ]
 
 MIDDLEWARE = [

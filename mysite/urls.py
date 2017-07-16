@@ -25,5 +25,6 @@ urlpatterns = [
 	url(r'^calc/add$', add),	
 	url(r'^polls/', include('polls.urls', namespace="polls")),
 	url(r'^books/', include('books.urls', namespace="books")),
+	url(r'^blog/', include('blog.urls', namespace="blog")),
 	url(r'^admin/', include(admin.site.urls)),
 ]
