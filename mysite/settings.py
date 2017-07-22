@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 	'polls',	# added by AllenPython
 	'books',	# added by AllenPython
 	'blog',		# added by AllenPython
+	'moneybook', # added by AllenPython
 ]
 
 MIDDLEWARE = [
