@@ -1,0 +1,11 @@
+<div>
+    <h1><a href="/">Allen Kim's Money Book</a></h1>
+</div>
+
+{% for transaction in transactions %}
+    <div>
+        <h1><a href="">{{ transaction.date }}</a></h1>
+        <p>{{ transaction.name }}</p>
+        <p>{{ transaction.value }} 원</p>
+    </div>
+{% endfor %}
