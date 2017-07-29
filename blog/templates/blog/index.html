@@ -1,0 +1,21 @@
+{% extends "base_blog.html" %}
+
+{% block content %}
+
+<h2>Blog Post List</h2>
+
+{% if blog_list %}
+	{% for post in blog_list %}
+		<div>
+			<h1><a href="">Title : {{ post.title }}</a></h1>
+			<p>Author : {{ post.author }}</p>
+			<p>Text : {{ post.text }}</p>
+			<p>Created Date : {{ post.created_date  }}</p>
+			<p>Published Date : {{ post.published_date }}</p>
+		</div>
+	{% endfor %}
+{% else %}
+    <p>No Posts are available.</p>
+{% endif %}
+
+{% endblock content %}

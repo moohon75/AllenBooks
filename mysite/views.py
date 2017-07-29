@@ -3,7 +3,7 @@ from django.views.generic.base import TemplateView
 
 #--- TemplateView
 def hello(request):
-	return HttpResponse("Hello Django!!")
+	return HttpResponse("Hello Django!! by Allen Kim")
 
 class HomeView(TemplateView):
 
@@ -11,5 +11,5 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(HomeView, self).get_context_data(**kwargs)
-        context['object_list'] = ['polls', 'books', 'moneybook']
+        context['object_list'] = ['polls', 'books', 'moneybook', 'blog']
         return context
