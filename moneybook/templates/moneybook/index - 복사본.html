@@ -1,0 +1,16 @@
+{% extends "base_moneybook.html" %}
+
+{% block content %}
+
+<h2>MoneyBook Transaction List</h2>
+
+{% if moneybook_list %}
+	<ul>
+    {% for name in moneybook_list %}
+        <li><a href="{% url 'moneybook:index' transaction.id %}">{{ transaction.name }}</a></li>
+    {% endfor %}
+	</ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+{% endblock content %}
